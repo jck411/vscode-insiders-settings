@@ -5,9 +5,26 @@
 			"type": "promptString",
 			"description": "API key for authentication",
 			"password": true
+		},
+		{
+			"id": "GITHUB_TOKEN",
+			"type": "promptString",
+			"description": "GitHub Personal Access Token (repo scope)",
+			"password": true
 		}
 	],
 	"servers": {
+		"github/github-mcp-server": {
+			"type": "stdio",
+			"command": "/usr/bin/npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-github"
+			],
+			"env": {
+				"GITHUB_PERSONAL_ACCESS_TOKEN": "${input:GITHUB_TOKEN}"
+			}
+		},
 		"microsoft/playwright-mcp": {
 			"type": "stdio",
 			"command": "/usr/bin/npx",
