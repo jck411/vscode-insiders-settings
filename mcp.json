@@ -1,13 +1,18 @@
 {
-	"inputs": [
-		{
-			"id": "CONTEXT7_API_KEY",
-			"type": "promptString",
-			"description": "API key for authentication",
-			"password": true
-		}
-	],
+	"inputs": [],
 	"servers": {
+		"upstash/context7-mcp": {
+			"type": "stdio",
+			"command": "/usr/bin/npx",
+			"args": [
+				"-y",
+				"@upstash/context7-mcp"
+			],
+			"env": {
+				"DEFAULT_MINIMUM_TOKENS": "10000",
+				"CONTEXT7_API_KEY": "${env:CONTEXT7_API_KEY}"
+			}
+		},
 		"github/github-mcp-server": {
 			"type": "stdio",
 			"command": "/usr/bin/npx",
