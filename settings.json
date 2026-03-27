@@ -1,0 +1,59 @@
+{
+    "chat.mcp.serverSampling": {
+        "Global in Code - Insiders: microsoft/playwright-mcp": {
+            "allowedModels": [
+                "copilot/claude-sonnet-4.5",
+                "copilot/auto"
+            ],
+            "autoApprove": true
+        },
+    },
+    "python.defaultInterpreterPath": "/bin/python3",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "chat.tools.terminal.outputLocation": "chat",
+    "chat.tools.autoApprove": true,
+    "chat.tools.terminal.autoApprove": {
+        "/./": true
+    },
+    "github.copilot.chat.agent.runTasks": true,
+    // Shell integration & terminal autonomy
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+    "terminal.integrated.inheritEnv": true,
+    "terminal.integrated.gpuAcceleration": "auto",
+    "github.copilot.chat.terminalChatAutoRun": true,
+    // Agent autonomy maximizers
+    "chat.tools.urls.autoApprove": {
+        "https://*": true,
+        "http://localhost:*": true,
+        "http://127.0.0.1:*": true
+    },
+    "chat.agent.maxRequests": 100,
+    "chat.tools.terminal.blockDetectedFileWrites": "never",
+    "chat.mcp.discovery.enabled": {
+        "claude-desktop": true,
+        "windsurf": true,
+        "cursor-global": true,
+        "cursor-workspace": true
+    },
+    "svelte.ask-to-enable-ts-plugin": false,
+    "terminal.integrated.initialHint": false,
+    "python.analysis.typeCheckingMode": "basic",
+    "github.copilot.chat.responsesApiReasoningEffort": "high",
+    "workbench.startupEditor": "none",
+    // Grant read access to folders outside workspace (kills "Allow reading external directory?" prompts)
+    "github.copilot.chat.additionalReadAccessFolders": [
+        "/home/jack/.config",
+        "/home/jack/REPOS"
+    ],
+    // Remove default blocks on rm, curl, kill, etc. in terminal auto-approve
+    "chat.tools.terminal.ignoreDefaultAutoApproveRules": true,
+    // Auto-reply to terminal prompts (y/n, etc.)
+    "chat.tools.terminal.autoReplyToPrompts": true,
+    // Skip confirmation dialogs for edit undo/retry
+    "chat.editing.confirmEditRequestRemoval": false,
+    "chat.editing.confirmEditRequestRetry": false,
+    "window.confirmSaveUntitledWorkspace": false,
+    "chat.viewSessions.orientation": "stacked"
+}

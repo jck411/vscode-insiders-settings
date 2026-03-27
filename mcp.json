@@ -1,0 +1,21 @@
+{
+	"inputs": [
+		{
+			"id": "CONTEXT7_API_KEY",
+			"type": "promptString",
+			"description": "API key for authentication",
+			"password": true
+		}
+	],
+	"servers": {
+		"microsoft/playwright-mcp": {
+			"type": "stdio",
+			"command": "/usr/bin/npx",
+			"args": [
+				"@playwright/mcp@latest"
+			],
+			"gallery": "https://api.mcp.github.com",
+			"version": "0.0.1-seed"
+		}
+	}
+}

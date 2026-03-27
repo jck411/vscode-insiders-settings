@@ -1,0 +1,17 @@
+# Credentials
+.env
+
+# Extension state (large binary databases)
+globalStorage/
+
+# Per-workspace state
+workspaceStorage/
+
+# Local edit history
+History/
+
+# Settings Sync state
+sync/
+
+# MCP server installs
+mcp/microsoft.playwright-mcp-*/
