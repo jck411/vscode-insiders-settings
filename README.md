@@ -61,43 +61,26 @@ workspaceStorage/77d33e8f1d25285d14b50187d6d28e7d/GitHub.copilot-chat/memory-too
     └── plan.md
 ```
 
-**Repo memory** — persists, scoped to the workspace/repo:
-```
-workspaceStorage/77d33e8f1d25285d14b50187d6d28e7d/GitHub.copilot-chat/memory-tool/memories/
-└── repo/
-    └── conventions.md
-```
-
 ---
 
 ### `github.copilot.chat.copilotMemory.enabled` *(preview)*
 
-Remote memory stored on GitHub's servers. Cross-session, cross-workspace, and cross-machine. Not stored locally — no folder to inspect or edit. Copilot writes and recalls it automatically.
+Remote memory stored on GitHub's servers. Scoped to a repository, but cross-session, cross-workspace, and cross-machine. Not stored locally — no folder to inspect or edit. Copilot writes and recalls it automatically. Manage or delete memories at: **GitHub repo → Settings → Copilot → Memory**.
+
+This includes **repo memory** written via the memory tool (`/memories/repo/`). Despite appearing to be a local path in the tool API, repo memories are actually sent to GitHub's servers, not stored as local files.
 
 ---
 
 ### Summary
 
-#### `tools.memory.enabled` — Local file-based memory (3 scopes)
-
 | | User memory | Session memory | Repo memory |
 |---|---|---|---|
+| Setting | `tools.memory.enabled` | `tools.memory.enabled` | `copilotMemory.enabled` |
 | Survives session end | Yes | **No** (deleted) | Yes |
 | Cross-workspace | Yes | No | No (tied to one repo) |
-| Cross-machine | No (local files) | No | No |
-| You can read/edit it | Yes | Yes | Yes |
-| Path | `globalStorage/.../memories/` | `workspaceStorage/.../memories/<base64-session-id>/` | `workspaceStorage/.../memories/repo/` |
-
-#### `copilotMemory.enabled` — GitHub-hosted remote memory
-
-| | |
-|---|---|
-| Survives session end | Yes |
-| Cross-workspace | Yes |
-| Cross-machine | Yes (stored on GitHub servers) |
-| You can read/edit it | No (managed via GitHub repo settings) |
-| Scope | Repository-specific |
-| Used by | Copilot coding agent, code review (github.com), Copilot CLI |
+| Cross-machine | No (local files) | No | **Yes** (GitHub servers) |
+| You can read/edit it | Yes (local `.md` files) | Yes (local `.md` files) | No (GitHub repo settings only) |
+| Local path | `globalStorage/.../memories/` | `workspaceStorage/.../memories/<base64-session-id>/` | **None** — stored on GitHub |
 
 ## Setup
 
