@@ -55,5 +55,6 @@
     "chat.editing.confirmEditRequestRemoval": false,
     "chat.editing.confirmEditRequestRetry": false,
     "window.confirmSaveUntitledWorkspace": false,
-    "chat.viewSessions.orientation": "stacked"
+    "chat.viewSessions.orientation": "stacked",
+    "github.copilot.chat.copilotMemory.enabled": true
 }
