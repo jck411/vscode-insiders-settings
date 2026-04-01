@@ -56,5 +56,8 @@
     "chat.editing.confirmEditRequestRetry": false,
     "window.confirmSaveUntitledWorkspace": false,
     "chat.viewSessions.orientation": "stacked",
-    "github.copilot.chat.copilotMemory.enabled": true
+    "github.copilot.chat.copilotMemory.enabled": true,
+    "workbench.colorTheme": "Nord",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Nord"
 }
