@@ -59,5 +59,6 @@
     "github.copilot.chat.copilotMemory.enabled": true,
     "workbench.colorTheme": "Nord",
     "window.autoDetectColorScheme": true,
-    "workbench.preferredLightColorTheme": "Nord"
+    "workbench.preferredLightColorTheme": "Nord",
+    "git.autofetch": true
 }
